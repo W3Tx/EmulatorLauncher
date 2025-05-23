@@ -15,17 +15,57 @@ namespace EmulatorLauncher.ViewModels
         public ObservableCollection<Game> Games { get; set; } = new();
 
         // Eingabefelder für Emulator
-        public string EmuName { get => _emuName; set { _emuName = value; OnPropertyChanged(); } }
-        public string EmuPlatform { get => _emuPlatform; set { _emuPlatform = value; OnPropertyChanged(); } }
-        public string EmuPath { get => _emuPath; set { _emuPath = value; OnPropertyChanged(); } }
+        public string EmuName { 
+            get => _emuName; 
+            set { 
+                _emuName = value; 
+                OnPropertyChanged(); 
+            } 
+        }
+        public string EmuPlatform { 
+            get => _emuPlatform; 
+            set { 
+                _emuPlatform = value; 
+                OnPropertyChanged(); 
+            } 
+        }
+        public string EmuPath { 
+            get => _emuPath; 
+            set { 
+                _emuPath = value; 
+                OnPropertyChanged(); 
+            } 
+        }
 
         // Eingabefelder für Spiel
-        public string GameTitle { get => _gameTitle; set { _gameTitle = value; OnPropertyChanged(); } }
-        public string GamePlatform { get => _gamePlatform; set { _gamePlatform = value; OnPropertyChanged(); } }
-        public string GameRomPath { get => _gameRomPath; set { _gameRomPath = value; OnPropertyChanged(); } }
+        public string GameTitle { 
+            get => _gameTitle; 
+            set { 
+                _gameTitle = value; 
+                OnPropertyChanged(); 
+            } 
+        }
+        public string GamePlatform { 
+            get => _gamePlatform; 
+            set { 
+                _gamePlatform = value; 
+                OnPropertyChanged(); 
+            } 
+        }
+        public string GameRomPath { 
+            get => _gameRomPath; 
+            set { _gameRomPath = value; 
+                OnPropertyChanged(); 
+            } 
+        }
 
         // Auswahl für zugeordneten Emulator
-        public Emulator? SelectedEmulator { get => _selectedEmulator; set { _selectedEmulator = value; OnPropertyChanged(); } }
+        public Emulator? SelectedEmulator { 
+            get => _selectedEmulator; 
+            set { _selectedEmulator = value; 
+                OnPropertyChanged(); 
+            } 
+        }
 
         // Befehle für Buttons
         public ICommand SaveEmulatorCommand { get; }
