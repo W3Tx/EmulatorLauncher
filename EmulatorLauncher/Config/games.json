@@ -1,0 +1,20 @@
+[
+  {
+    "Title": "The Legend of Zelda: Ocarina of Time",
+    "RomPath": "D:\\Roms\\N64\\Zelda_OoT.z64",
+    "Platform": "N64",
+    "EmulatorName": "Project64"
+  },
+  {
+    "Title": "Mario Kart: Double Dash",
+    "RomPath": "D:\\Roms\\GameCube\\MK_DD.iso",
+    "Platform": "GameCube",
+    "EmulatorName": "Dolphin"
+  },
+  {
+    "Title": "Metroid Fusion",
+    "RomPath": "D:\\Roms\\GBA\\MetroidFusion.gba",
+    "Platform": "GBA",
+    "EmulatorName": "mGBA"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Project64",
+    "Platform": "N64",
+    "Path": "C:\\Emulatoren\\Project64\\project64.exe"
+  },
+  {
+    "Name": "Dolphin",
+    "Platform": "GameCube",
+    "Path": "C:\\Emulatoren\\Dolphin\\dolphin.exe"
+  },
+  {
+    "Name": "mGBA",
+    "Platform": "GBA",
+    "Path": "C:\\Emulatoren\\mGBA\\mgba.exe"
+  }
+]
