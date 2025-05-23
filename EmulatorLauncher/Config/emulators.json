@@ -1,8 +1,8 @@
 [
   {
-    "Name": "Project64",
-    "Platform": "N64",
-    "Path": "C:\\Emulatoren\\Project64\\project64.exe"
+    "Name": "PCSX2",
+    "Platform": "PS2",
+    "Path": "C:\\Emulatoren\\PCSX2\\pcsx2.exe"
   },
   {
     "Name": "Dolphin",
@@ -10,8 +10,93 @@
     "Path": "C:\\Emulatoren\\Dolphin\\dolphin.exe"
   },
   {
+    "Name": "Citra",
+    "Platform": "3DS",
+    "Path": "C:\\Emulatoren\\Citra\\citra.exe"
+  },
+  {
+    "Name": "Yuzu",
+    "Platform": "Switch",
+    "Path": "C:\\Emulatoren\\Yuzu\\yuzu.exe"
+  },
+  {
+    "Name": "Project64",
+    "Platform": "N64",
+    "Path": "C:\\Emulatoren\\Project64\\project64.exe"
+  },
+  {
+    "Name": "Nestopia",
+    "Platform": "NES",
+    "Path": "C:\\Emulatoren\\Nestopia\\nestopia.exe"
+  },
+  {
+    "Name": "SNES9x",
+    "Platform": "SNES",
+    "Path": "C:\\Emulatoren\\SNES9x\\snes9x.exe"
+  },
+  {
     "Name": "mGBA",
     "Platform": "GBA",
     "Path": "C:\\Emulatoren\\mGBA\\mgba.exe"
+  },
+  {
+    "Name": "VisualBoyAdvance",
+    "Platform": "GBA",
+    "Path": "C:\\Emulatoren\\VBA\\vba.exe"
+  },
+  {
+    "Name": "PPSSPP",
+    "Platform": "PSP",
+    "Path": "C:\\Emulatoren\\PPSSPP\\ppsspp.exe"
+  },
+  {
+    "Name": "ePSXe",
+    "Platform": "PS1",
+    "Path": "C:\\Emulatoren\\ePSXe\\epsxe.exe"
+  },
+  {
+    "Name": "RetroArch",
+    "Platform": "Multi",
+    "Path": "C:\\Emulatoren\\RetroArch\\retroarch.exe"
+  },
+  {
+    "Name": "Cemu",
+    "Platform": "Wii U",
+    "Path": "C:\\Emulatoren\\Cemu\\cemu.exe"
+  },
+  {
+    "Name": "RPCS3",
+    "Platform": "PS3",
+    "Path": "C:\\Emulatoren\\RPCS3\\rpcs3.exe"
+  },
+  {
+    "Name": "Xenia",
+    "Platform": "Xbox360",
+    "Path": "C:\\Emulatoren\\Xenia\\xenia.exe"
+  },
+  {
+    "Name": "OpenMSX",
+    "Platform": "MSX",
+    "Path": "C:\\Emulatoren\\OpenMSX\\openmsx.exe"
+  },
+  {
+    "Name": "DOSBox",
+    "Platform": "DOS",
+    "Path": "C:\\Emulatoren\\DOSBox\\dosbox.exe"
+  },
+  {
+    "Name": "Atari800",
+    "Platform": "Atari",
+    "Path": "C:\\Emulatoren\\Atari800\\atari800.exe"
+  },
+  {
+    "Name": "MAME",
+    "Platform": "Arcade",
+    "Path": "C:\\Emulatoren\\MAME\\mame.exe"
+  },
+  {
+    "Name": "BlueStacks",
+    "Platform": "Android",
+    "Path": "C:\\Emulatoren\\BlueStacks\\bluestacks.exe"
   }
 ]

@@ -6,15 +6,17 @@ namespace EmulatorLauncher.Views
 {
     public partial class AdminWindow : Window
     {
+        // ViewModel für das Admin-Fenster
         private readonly AdminViewModel _viewModel;
 
         public AdminWindow()
         {
             InitializeComponent();
             _viewModel = new AdminViewModel();
-            DataContext = _viewModel;
+            DataContext = _viewModel; // Bindet die UI an das ViewModel
         }
 
+        // Öffnet Datei-Dialog zum Auswählen einer Emulator-EXE
         private void BrowseExe_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new OpenFileDialog
@@ -29,6 +31,7 @@ namespace EmulatorLauncher.Views
             }
         }
 
+        // Öffnet Datei-Dialog zum Auswählen einer ROM-Datei
         private void BrowseRom_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new OpenFileDialog

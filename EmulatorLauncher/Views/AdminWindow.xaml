@@ -5,13 +5,13 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     Title="Admin-Bereich"
     Width="850"
-    Height="650"
-    WindowStartupLocation="CenterOwner">
+    Height="650">
 
+    <!--  Scrollbarer Bereich für beide Verwaltungsbereiche  -->
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="20">
 
-            <!--  Emulator-Verwaltung  -->
+            <!--  ================= EMULATOR-VERWALTUNG =================  -->
             <TextBlock
                 Margin="0,0,0,10"
                 FontSize="20"
@@ -19,47 +19,46 @@
                 Style="{StaticResource MaterialDesignHeadline6TextBlock}"
                 Text="Emulatoren verwalten" />
 
+            <!--  Liste vorhandener Emulatoren  -->
             <ListBox
                 Height="100"
                 Margin="0,0,0,10"
                 DisplayMemberPath="Name"
                 ItemsSource="{Binding Emulators}" />
 
+            <!--  Eingabefelder für neuen Emulator  -->
             <TextBox
                 Margin="0,5"
                 materialDesign:HintAssist.Hint="Name"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding EmuName, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Margin="0,5"
                 materialDesign:HintAssist.Hint="Plattform"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding EmuPlatform, UpdateSourceTrigger=PropertyChanged}" />
 
             <DockPanel Margin="0,5">
+                <!--  Exe-Pfad anzeigen (readonly) + Button zum Durchsuchen  -->
                 <TextBox
                     Width="400"
                     materialDesign:HintAssist.Hint="Pfad zur .exe"
                     IsReadOnly="True"
-                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                     Text="{Binding EmuPath, UpdateSourceTrigger=PropertyChanged}" />
                 <Button
                     Margin="10,0,0,0"
                     Click="BrowseExe_Click"
-                    Content="Durchsuchen"
-                    Style="{StaticResource MaterialDesignOutlinedButton}" />
+                    Content="Durchsuchen" />
             </DockPanel>
 
+            <!--  Emulator speichern  -->
             <Button
                 Margin="0,10,0,20"
                 Command="{Binding SaveEmulatorCommand}"
-                Content="Emulator speichern"
-                Style="{StaticResource MaterialDesignRaisedButton}" />
+                Content="Emulator speichern" />
 
             <Separator Margin="0,10" />
 
-            <!--  Spiele-Verwaltung  -->
+            <!--  ================= SPIELE-VERWALTUNG =================  -->
             <TextBlock
                 Margin="0,10,0,10"
                 FontSize="20"
@@ -67,51 +66,50 @@
                 Style="{StaticResource MaterialDesignHeadline6TextBlock}"
                 Text="Spiele verwalten" />
 
+            <!--  Liste vorhandener Spiele  -->
             <ListBox
                 Height="100"
                 Margin="0,0,0,10"
                 DisplayMemberPath="Title"
                 ItemsSource="{Binding Games}" />
 
+            <!--  Eingabefelder für neues Spiel  -->
             <TextBox
                 Margin="0,5"
                 materialDesign:HintAssist.Hint="Spiel-Titel"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding GameTitle, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Margin="0,5"
                 materialDesign:HintAssist.Hint="Plattform"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding GamePlatform, UpdateSourceTrigger=PropertyChanged}" />
 
             <DockPanel Margin="0,5">
+                <!--  ROM-Pfad (readonly) + Button zum Durchsuchen  -->
                 <TextBox
                     Width="400"
                     materialDesign:HintAssist.Hint="Pfad zur ROM-Datei"
                     IsReadOnly="True"
-                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                     Text="{Binding GameRomPath, UpdateSourceTrigger=PropertyChanged}" />
                 <Button
                     Margin="10,0,0,0"
                     Click="BrowseRom_Click"
-                    Content="Durchsuchen"
-                    Style="{StaticResource MaterialDesignOutlinedButton}" />
+                    Content="Durchsuchen" />
             </DockPanel>
 
+            <!--  Auswahl eines Emulators für das Spiel  -->
             <ComboBox
                 Margin="0,5"
                 materialDesign:HintAssist.Hint="Zugewiesener Emulator"
                 DisplayMemberPath="Name"
                 ItemsSource="{Binding Emulators}"
-                SelectedItem="{Binding SelectedEmulator}"
-                Style="{StaticResource MaterialDesignComboBox}" />
+                SelectedItem="{Binding SelectedEmulator}" />
 
+            <!--  Spiel speichern  -->
             <Button
                 Margin="0,10,0,0"
                 Command="{Binding SaveGameCommand}"
-                Content="Spiel speichern"
-                Style="{StaticResource MaterialDesignRaisedButton}" />
+                Content="Spiel speichern" />
         </StackPanel>
     </ScrollViewer>
 </Window>

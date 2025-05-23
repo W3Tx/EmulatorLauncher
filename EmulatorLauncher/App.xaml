@@ -4,20 +4,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     StartupUri="Views/MainWindow.xaml">
+
+    <!--  Globale Ressourcen der App  -->
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+
+                <!--  Setzt das MaterialDesign-Theme (dunkel mit Indigo/Lime-Farben)  -->
                 <materialDesign:BundledTheme
                     BaseTheme="Dark"
                     PrimaryColor="Indigo"
                     SecondaryColor="Lime" />
 
-                <!--  Die folgenden müssen exakt stimmen  -->
+                <!--  Wichtige Styles aus der MaterialDesign-Bibliothek  -->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
 
-                <!--  Basistheme  -->
+                <!--  Weitere Steuerelement-Stile  -->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />

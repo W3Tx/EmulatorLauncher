@@ -10,28 +10,28 @@
     WindowStartupLocation="CenterScreen">
 
     <Grid>
+        <!--  Zwei Spalten: links Emulatorliste, rechts Spieleliste  -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!--  Emulatorliste  -->
+        <!--  Emulatorliste (linke Spalte)  -->
         <ScrollViewer Margin="10" VerticalScrollBarVisibility="Auto">
             <ListBox ItemsSource="{Binding Emulators}" SelectedItem="{Binding SelectedEmulator}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <materialDesign:Card Margin="5" Padding="10">
-                            <StackPanel>
-                                <TextBlock FontWeight="Bold" Text="{Binding Name}" />
-                                <TextBlock FontStyle="Italic" Text="{Binding Platform}" />
-                            </StackPanel>
-                        </materialDesign:Card>
+                        <!--  Darstellung je Emulator in einer MaterialDesign-Karte  -->
+                        <StackPanel Margin="5">
+                            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                            <TextBlock FontStyle="Italic" Text="{Binding Platform}" />
+                        </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </ScrollViewer>
 
-        <!--  Spieleliste  -->
+        <!--  Spieleliste (rechte Spalte)  -->
         <ScrollViewer
             Grid.Column="1"
             Margin="10"
@@ -42,27 +42,28 @@
                 SelectedItem="{Binding SelectedGame}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <materialDesign:Card Margin="5" Padding="10">
-                            <StackPanel>
-                                <TextBlock FontWeight="Bold" Text="{Binding Title}" />
-                                <TextBlock FontStyle="Italic" Text="{Binding Platform}" />
-                            </StackPanel>
-                        </materialDesign:Card>
+                        <!--  Darstellung je Spiel in einer MaterialDesign-Karte  -->
+                        <StackPanel Margin="5">
+                            <TextBlock FontWeight="Bold" Text="{Binding Title}" />
+                            <TextBlock FontStyle="Italic" Text="{Binding Platform}" />
+                        </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </ScrollViewer>
 
-        <!--  Admin öffnen (Zahnrad)  -->
+        <!--  Button oben rechts mit Zahnrad-Symbol (öffnet Adminbereich)  -->
         <Button
+            Grid.Column="1"
             Width="40"
             Height="40"
-            Margin="10"
+            Margin="0,0,20,24"
             HorizontalAlignment="Right"
-            VerticalAlignment="Top"
+            VerticalAlignment="Bottom"
             Click="OpenAdmin_Click"
             Content="⚙"
             FontSize="18"
-            ToolTip="Admin öffnen" />
+            ToolTip="Admin öffnen"
+            UseLayoutRounding="True" />
     </Grid>
 </Window>

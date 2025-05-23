@@ -7,17 +7,18 @@ namespace EmulatorLauncher.Services
 {
     public class ConfigService
     {
+        // Pfade zu den JSON-Dateien (relativ zum Projektverzeichnis)
         private const string EmulatorFilePath = "Config/emulators.json";
         private const string GameFilePath = "Config/games.json";
 
-        // Json Optionen (fuer bessere Lesbarkeit und Sonderzeichen
+        // JSON-Optionen: Einrücken + Groß-/Kleinschreibung ignorieren
         private readonly JsonSerializerOptions _options = new()
         {
             WriteIndented = true,
             PropertyNameCaseInsensitive = true,
         };
 
-        // Emulatoren laden
+        // Emulatoren aus JSON-Datei laden
         public async Task<List<Emulator>> LoadEmulatorsAsync()
         {
             try
@@ -27,17 +28,16 @@ namespace EmulatorLauncher.Services
 
                 string json = await File.ReadAllTextAsync(EmulatorFilePath);
                 var list = JsonSerializer.Deserialize<List<Emulator>>(json, _options);
-                return list ?? new();
+                return list ?? new(); // Falls null, leere Liste zurückgeben
             }
             catch (Exception ex)
             {
-                // Logging möglich
                 MessageBox.Show($"Fehler beim Laden der Emulatoren: {ex.Message}");
                 return new();
             }
         }
 
-        // Emulatoren speichern
+        // Emulatoren in JSON-Datei speichern
         public async Task SaveEmulatorsAsync(List<Emulator> emulators)
         {
             try
@@ -51,7 +51,7 @@ namespace EmulatorLauncher.Services
             }
         }
 
-        // Spiele laden
+        // Spiele aus JSON-Datei laden
         public async Task<List<Game>> LoadGamesAsync()
         {
             try
@@ -70,7 +70,7 @@ namespace EmulatorLauncher.Services
             }
         }
 
-        // Spiele speichern
+        // Spiele in JSON-Datei speichern
         public async Task SaveGamesAsync(List<Game> games)
         {
             try
